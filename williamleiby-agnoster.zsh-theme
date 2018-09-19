@@ -110,9 +110,9 @@ prompt_git() {
     dirty=$(parse_git_dirty)
     ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="➦ $(git rev-parse --short HEAD 2> /dev/null)"
     if [[ -n $dirty ]]; then
-      prompt_segment red white
+      prompt_segment blue white
     else
-      prompt_segment blue white  
+      prompt_segment magenta white  
       # $CURRENT_FG
     fi
 
